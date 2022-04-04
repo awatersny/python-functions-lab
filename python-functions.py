@@ -4,6 +4,9 @@
 #       sum_to(6)  # returns 21
 #       sum_to(10) # returns 55
 
+import re
+
+
 def sum_to(n):
   return n * (n+1) // 2
 
@@ -18,7 +21,7 @@ def sum_to(n):
 def largest(arglist):
   return max(arglist)
 
-print(largest([10, 4, 2, 231, 91, 54]))
+# print(largest([10, 4, 2, 231, 91, 54]))
 
 # 3. Write a function named `occurrences` that takes two string arguments as input and counts the number of occurrences of the second string inside the first string.
     
@@ -28,7 +31,13 @@ print(largest([10, 4, 2, 231, 91, 54]))
 #       occurrences('fleep floop', 'ee')  # returns 1
 #       occurrences('fleep floop', 'fe')  # returns 0
 
+# def occurrences(str1, str2):
+#   count = 0
+#   for char in str1:
+#     count = count + 1 if char == str2 else count
+#   return count
 
+# print(occurrences('fleep floop', 'ee'))
 
 # 4. Write a function named `product` that takes an *arbitrary* number of numbers, multiplies them all together, and returns the product. HINT: Review your notes on `args`.
     
@@ -36,3 +45,10 @@ print(largest([10, 4, 2, 231, 91, 54]))
 #       product(-1, 4) # returns -4
 #       product(2, 5, 5) # returns 50
 #       product(4, 0.5, 5) # returns 10.0
+
+def product(*args):
+  prod = 1
+  for factor in args:
+    prod *= factor
+  return prod
+print(product(4, 0.5, 5))

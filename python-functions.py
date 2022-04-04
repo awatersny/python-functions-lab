@@ -4,7 +4,10 @@
 #       sum_to(6)  # returns 21
 #       sum_to(10) # returns 55
 
+def sum_to(n):
+  return n * (n+1) // 2
 
+print(sum_to(5))
 
 # 2. Write a function named `largest` that takes a list of numbers as an argument and returns the largest number in that list.
     

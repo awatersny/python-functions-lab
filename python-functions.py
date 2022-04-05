@@ -31,13 +31,10 @@ def largest(arglist):
 #       occurrences('fleep floop', 'ee')  # returns 1
 #       occurrences('fleep floop', 'fe')  # returns 0
 
-# def occurrences(str1, str2):
-#   count = 0
-#   for char in str1:
-#     count = count + 1 if char == str2 else count
-#   return count
+def occurrences(str1, str2):
+  return str1.count(str2)
 
-# print(occurrences('fleep floop', 'ee'))
+print(occurrences('fleep floop', 'e'))
 
 # 4. Write a function named `product` that takes an *arbitrary* number of numbers, multiplies them all together, and returns the product. HINT: Review your notes on `args`.
     
@@ -51,4 +48,5 @@ def product(*args):
   for factor in args:
     prod *= factor
   return prod
-print(product(4, 0.5, 5))
+
+# print(product(4, 0.5, 5))
